@@ -12,10 +12,6 @@ import wikipediaapi
 
 web_site = Flask(__name__)
 
-number_list = [
-	429, 431, 444, 450, 451, 500, 502, 503, 504, 506, 507, 508, 509, 510, 511, 599
-]
-
 def get_wiki_about(link):
   parts = link.split('/')
   subject = parts[-1]
@@ -144,9 +140,5 @@ def generate_user(username):
 		return 'Sorry error something, malformed request.'
 
 	return render_template('personal_user.html', user=username)
-
-@web_site.route('/page')
-def random_page():
-  return render_template('page.html', code=choice(number_list))
 
 web_site.run(host='0.0.0.0', port=8080)
