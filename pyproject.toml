@@ -1,0 +1,12 @@
+[tool]
+[tool.poetry]
+authors = ["Your Name <you@example.com>"]
+name = "root"
+version = "0.0.0"
+description="flask template"
+[tool.poetry.dependencies]
+flask = "==1.0.2"
+python = "^3.8"
+yfinance = "^0.1.63"
+google-search-results = "^2.3.0"
+datamart-isi = "^2.1.10"
